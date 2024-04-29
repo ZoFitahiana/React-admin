@@ -1,5 +1,7 @@
 import React from "react";
-import {List, Datagrid, TextField, EditButton } from "react-admin";
+import { List, Datagrid, TextField, EditButton, ShowButton } from "react-admin";
+
+
 
 export const PostList: React.FC = (props) => {
     return (
@@ -8,9 +10,9 @@ export const PostList: React.FC = (props) => {
                 <TextField source="id" />
                 <TextField source="title" label="Titre" />
                 <TextField source="name" label="Nom de l'utilisateur" />
+                <ShowButton  label="Voir plus..." />
                 <EditButton label="Commentaire" />
             </Datagrid>
         </List>
     );
 };
-
